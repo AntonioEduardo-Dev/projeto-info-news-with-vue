@@ -1,61 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #0eaee5;
+  --color-brand-dark: #0f172a;
+  --color-brand-light: #f8fafc;
+  --font-rajdhani: 'Rajdhani', sans-serif;
+}
+
 body {
-    background-color: #0eaee5;
-    font-family: 'Rajdhani', sans-serif;
+  font-family: var(--font-rajdhani);
+  background-color: #f1f5f9;
+  color: #334155;
+  margin: 0;
+  overflow-x: hidden;
 }
 
-header {
-    background-color: #23395d;
-    text-align: center;
-    padding: 0 0;
-    height: auto;
-    max-width: 100%;
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-header img {
-    height: auto;
-    max-width: 100%;
+.neo-shadow {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
 }
 
-.navbar {
-    background-color: #16b7e9;
-}
-
-.navbar-nav .nav-link {
-    color: black;
-    font-weight: bold;
-}
-
-.navbar-nav .nav-link.active {
-    text-decoration: underline;
-}
-
-.social-icons img {
-    width: 35px;
-    height: 35px;
-    margin-left: 10px;
-    object-fit: cover;
-}
-
-.content-box {
-    background-color: #b7e6fd;
-    border-radius: 10px;
-    padding: 40px;
-    margin-top: 20px;
-    min-height: calc(100vh - 200px);
-}
-
-footer {
-    background-color: #16b7e9;
-    text-align: center;
-    color: white;
-    padding: 20px 10px;
-    margin-top: 20px;
-}
-
-footer .social-icons img {
-    margin: 0 5px;
-}
-
-.social-icons a {
-    text-decoration: none;
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-blue to-blue-600;
 }

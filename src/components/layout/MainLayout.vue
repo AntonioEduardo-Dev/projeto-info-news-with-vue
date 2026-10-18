@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="min-h-screen flex flex-col">
     <TheHeader />
     <TheNavbar />
-    <div class="container">
-      <div class="content-box">
+    <main class="flex-grow container mx-auto px-4 py-8">
+      <div class="content-box p-6 md:p-10 min-h-[60vh]">
         <slot />
       </div>
-    </div>
+    </main>
     <TheFooter />
   </div>
 </template>
